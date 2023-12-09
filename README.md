@@ -20,3 +20,5 @@ npm run build
 ## License
 
 Text and images licensed CC-BY-SA 4.0, code licensed AGPL-3.0.
+
+This project received financial support from [netidee](https://www.netidee.at/shrinkwraplegal).
