@@ -95,6 +95,10 @@ export default {
     // Inject styles and scripts into the HTML
     new HtmlWebpackPlugin({
       template: path.resolve(process.cwd(), "index.html")
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(process.cwd(), "terms-imprint-privacy.html"),
+      filename: "terms-imprint-privacy.html"
     })
   ],
 
