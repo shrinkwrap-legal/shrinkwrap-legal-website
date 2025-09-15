@@ -1,0 +1,8 @@
+*
+!.gitignore
+!fonts
+!fonts/*
+!fonts/**/*
+!favicon.ico
+!favicon-32x32.png
+!apple-touch-icon.png
