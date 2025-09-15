@@ -13,10 +13,8 @@ export default {
   // Define the destination directory and filenames of compiled resources
   output: {
     filename: "js/[name].js",
-    path: path.resolve(process.cwd(), "./public"),
+    path: path.resolve(process.cwd(), "./dist"),
   },
-
-  // Define development options
   devtool: "source-map",
 
   // Define loaders
@@ -88,6 +86,17 @@ export default {
         {
           from: "src/images",
           to: "images",
+        },
+        // also copy all existing assets from /public to /dist, but exclude HTML
+        {
+          from: "public",
+          to: ".",
+          noErrorOnMissing: true,
+          globOptions: {
+            dot: true,
+            gitignore: true,
+            ignore: ["**/*.html"]
+          }
         }
       ]
     }),
@@ -105,7 +114,7 @@ export default {
   // Configure the "webpack-dev-server" plugin
   devServer: {
     static: {
-      directory: path.resolve(process.cwd(), "public")
+      directory: path.resolve(process.cwd(), "dist")
     },
     watchFiles: [
       path.resolve(process.cwd(), "index.html")
