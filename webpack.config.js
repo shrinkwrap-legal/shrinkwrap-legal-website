@@ -105,6 +105,10 @@ export default {
     new HtmlWebpackPlugin({
       template: path.resolve(process.cwd(), "index.html")
     }),
+      new HtmlWebpackPlugin({
+          template: path.resolve(process.cwd(), "index2.html"),
+          filename: "index2.html"
+      }),
     new HtmlWebpackPlugin({
       template: path.resolve(process.cwd(), "terms-imprint-privacy.html"),
       filename: "terms-imprint-privacy.html"

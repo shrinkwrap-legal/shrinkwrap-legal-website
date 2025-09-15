@@ -13,6 +13,9 @@
 //---------------------------------------------
 
 @import "variables";
+
+$primary: #00415d;
+
 @import "bootstrap";
 @import "fonts";
 
@@ -29,3 +32,43 @@ body {
 
 @import "components/slider";
 
+
+.small-print-container {
+  font-size: 0.5rem;
+  line-height: 0.75rem;
+
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  text-align: justify;
+  height: 100%;
+  overflow: hidden;
+  color: #555555;
+}
+#small-print-wrapper {
+  display: flex;
+  flex-direction: column;
+  animation: scroll 60s linear infinite;
+  max-height: 3600px;
+}
+#small-print-wrapper:hover {
+  animation-play-state: paused;
+}
+
+/* Optimierte Animation für flüssiges Scrollen */
+@keyframes scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+#left-content>div {
+  background: linear-gradient(transparent 0%, white 10%, white 90%, transparent 100%);
+}
+
+@media (max-width: 1200px) {
+  .w-xl-100 {
+    width: 100% !important;
+  }
+  .position-xl-absolute {
+    position: absolute !important;
+  }
+}
