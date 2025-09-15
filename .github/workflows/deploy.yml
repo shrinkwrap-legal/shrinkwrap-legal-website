@@ -31,10 +31,10 @@ jobs:
           npm run build
       - name: Adjust directory
         run: |
-          rm -f public/.gitignore
+          rm -f dist/.gitignore
           pwd
           ls -la
-          ls -la public
+          ls -la dist
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
