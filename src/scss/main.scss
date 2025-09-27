@@ -69,6 +69,12 @@ body {
   background: linear-gradient(transparent 0%, white 10%, white 90%, transparent 100%);
 }
 
+#left-content {
+  .btn-primary img {
+    vertical-align: sub;
+  }
+}
+
 @media (max-width: 1200px) {
   .w-xl-100 {
     width: 100% !important;

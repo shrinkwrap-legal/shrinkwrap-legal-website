@@ -19,14 +19,14 @@
 <!-- Erste Sektion: Startseite (volle Bildschirmhöhe) -->
 <section class="d-xl-flex flex-column flex-lg-row vh-100 position-relative">
     <!-- Linke Seite: Großer Text und CTA -->
-    <div id="left-content" class="col-xl-6 d-flex flex-column justify-content-center  w-xl-100 position-xl-absolute">
+    <div id="left-content" class="col-xl-6 d-flex flex-column justify-content-center  w-xl-100 position-xl-absolute z-2">
         <div class="mb-auto">
             <div class="container">
                 <div class="row">
                     <div class="offset-2 mt-5">
                         <h1>
                             <img src="images/shrinkwrap_logo_2.svg" style="max-width: 400px"
-                                 class="display-5 logo img-fluid" alt="shrinkwrap Logo" id="shrinkwrap-logo"/>
+                                 class="display-5 logo img-fluid" alt="shrinkwrap.legal Logo" id="shrinkwrap-logo"/>
                         </h1>
                     </div>
                 </div>
@@ -37,19 +37,19 @@
 
                 <div class="row">
                     <div class="offset-2 col-8">
-                <p class="lead mb-4 fs-2" >Gerichtsurteile, passend verpackt.</p>
+                <h1 class="mb-4 display-4" >Gerichtsurteile, passend verpackt.</h1>
                 <div class="lead mb-4">
                     <p>
-                        Wir fassen wesentlichen Informationen mit KI
+                        Wir fassen wesentliche Informationen mit KI
                         zusammen und machen sie dort sichtbar, wo auch
                         die juristische Recherche in Österreich erfolgt:
-                        Kostenlos und direkt im RIS
+                        Kostenlos und direkt im RIS.
                     </p>
                 </div>
                 <div class=" mt-5">
-                <button class="btn btn-primary px-5 py-3 rounded-pill fw-semibold" onclick="document.getElementById('newsletter').scrollIntoView();">
-                    Download <img src="images/chrome.svg" style="max-width: 20px" />
-                </button>
+                <a id="download-button" class="btn btn-primary px-5 py-3 rounded-pill fw-semibold" onclick="document.getElementById('newsletter').scrollIntoView();">
+                    Download &ensp; <img src="images/chrome_white.svg" style="max-width: 20px" />
+                </a>
                 </div>
                     </div>
                 </div>
@@ -70,17 +70,19 @@
 
 <section>
     <div class="container position-relative">
-        <div class="position-relative overflow-hidden shadow-lg rounded" style="top: -20vh">
+        <div class="col-10 offset-1">
+        <div class="position-relative overflow-hidden shadow rounded" style="margin-top: -20vh">
             <div class="position-relative z-3 ">
-            <img src="images/browser-frame.svg" class="img-fluid"  />
+                <img src="images/browser-frame.svg" class="img-fluid"/>
             </div>
             <div id="my-animation" class="m-auto position-absolute" style="top:0;left:0">
-                <img class="animation-header" src="images/header-only.png" />
+                <img class="animation-header" src="images/header-only.png"/>
                 <div class="animation-footer-container">
-                    <img class="animation-footer-1" src="images/ris-search-noext-footer.png" />
-                    <img class="animation-footer-2" src="images/store-search-hq-footer.png" />
+                    <img class="animation-footer-1" src="images/ris-search-noext-footer.png"/>
+                    <img class="animation-footer-2" src="images/store-search-hq-footer.png"/>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 
@@ -88,9 +90,9 @@
 
 
 <div class="container">
-    <div class="row my-5">
-        <div class="col-12 ">
-            <h2>Wieso shrinkwrap.legal?</h2>
+    <div class="row my-5 py-5">
+        <div class="col-8 offset-2 ">
+            <h2 class="display-5">Was ist das shrinkwrap.legal-Add-On?</h2>
             <p class="lead">Gerichtsurteile sind oft lange, schwer
                 verständlich, und wesentliche Information
                 schwer zu erfassen. Mit KI fasst
@@ -109,9 +111,9 @@
             </div>
 
         </div>
-        <div class="col-6">
-            <img src="images/chain-link.svg" style="width: 30px" />
-            <h3>Dockt direkt an das RIS an</h3>
+        <div class="col-6 p-4">
+            <img src="images/chain-link.svg" style="width: 40px" />
+            <h3 class="my-3">Dockt direkt an das RIS an</h3>
             <p>Unsere Browser-Erweiterung dockt
                 direkt im
                 Rechtsinformationssystem des
@@ -124,12 +126,12 @@
 </div>
 </section>
 <section class="">
-    <div class="container">
+    <div class="container my-3">
         <div class="row py-5">
-            <div class="col-6">
+            <div class="col-6 p-4">
                 <img src="images/ai.svg" style="width: 40px" />
-                <h3>Nachvollziehbar KI-generiert</h3>
-                <p>n der Suche und in der Entscheidungs-
+                <h3 class="my-3">Nachvollziehbar KI-generiert</h3>
+                <p>In der Suche und in der Entscheidungs-
                     Einzelansicht werden KI-generierte
                     wesentliche Aspekte direkt angezeigt.
                     Hintergrundinformationen ermöglichen eine
@@ -145,7 +147,7 @@
     </div>
 </section>
 <section class="accent-row">
-    <div class="container">
+    <div class="container my-3">
         <div class="row py-5">
             <div class="col-6">
                 <div class="position-relative">
@@ -153,9 +155,9 @@
                 </div>
 
             </div>
-            <div class="col-6">
-                [img]
-                <h3>Kostenlos und Open Source</h3>
+            <div class="col-6 p-4">
+                <img src="images/code-slash.svg" style="width: 40px" />
+                <h3 class="my-3">Kostenlos und Open Source</h3>
                 <p>Keine versteckten Kosten – einfach
                     herunterladen und ohne Registrierung
                     direkt loslegen! Alle Komponenten
@@ -164,11 +166,11 @@
         </div>
     </div>
 </section>
-<section>
+<section class="my-5">
     <div class="container">
         <div class="row py-5">
             <div class="text-center">
-            <a class="btn btn-primary px-5 py-3 rounded-pill fw-semibold">Download</a>
+            <a class="btn btn-primary px-5 py-3 rounded-pill fw-semibold">Browser-Erweiterung downloaden</a>
             </div>
         </div>
         <div class="row py-5">
@@ -177,22 +179,29 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 text-center">
                 <a href="https://example.com" class="text-decoration-none">
                 <img src="images/chrome.svg" class="img-fluid" style="max-width: 100px" />
-                <p>
+                <p class="mt-3 fs-4">
                 Google Chrome
                 </p>
                 </a>
             </div>
-            <div class="col-4">
-                <img src="images/firefox.svg" class="img-fluid" style="max-width: 100px" />
-                Mozilla Firefox
-            </div>
-            <div class="col-4">
+            <div class="col-4 text-center">
+                <a href="https://example.com" class="text-decoration-none">
+                    <img src="images/firefox.svg" class="img-fluid" style="max-width: 100px" />
+                    <p class="mt-3 fs-4">
+                        Mozilla Firefox
+                    </p>
+                </a>
+            </div><div class="col-4 text-center">
+            <a href="https://example.com" class="text-decoration-none">
                 <img src="images/edge.svg" class="img-fluid" style="max-width: 100px" />
-                Microsoft Edge
-            </div>
+                <p class="mt-3 fs-4">
+                    Microsoft Edge
+                </p>
+            </a>
+        </div>
         </div>
     </div>
 </section>
