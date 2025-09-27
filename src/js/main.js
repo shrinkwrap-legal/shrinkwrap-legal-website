@@ -3,6 +3,7 @@ import '../scss/main.scss';
 
 // Load Bootstrap init
 import {initBootstrap} from "./bootstrap.js";
+import Bowser from "bowser";
 
 // Loading bootstrap with optional features
 initBootstrap({
@@ -42,5 +43,38 @@ function indexPage() {
             smallPrintContainer.style.animationPlayState = 'running';
         }
     });
+
+
+
+    //set up browser links
+    const browser = Bowser.getParser(window.navigator.userAgent);
+
+
+    //Firefox
+    if (browser.getBrowserName() === "Firefox") {
+        document.querySelector("#linkToStore").setAttribute("href", document.querySelector("#linkFirefox").href);
+        document.querySelector("#linkToStorePrimary").setAttribute("href", document.querySelector("#linkFirefox").href);
+        document.querySelector("#linkImgChrome").remove();
+        document.querySelector("#linkImgEdge").remove();
+    }
+    //Edge
+    else if (browser.getBrowserName() === "Microsoft Edge") {
+        document.querySelector("#linkToStore").setAttribute("href", document.querySelector("#linkEdge").href);
+        document.querySelector("#linkToStorePrimary").setAttribute("href", document.querySelector("#linkEdge").href);
+        document.querySelector("#linkImgChrome").remove();
+        document.querySelector("#linkImgFirefox").remove();
+    }
+    else {
+        document.querySelector("#linkToStore").setAttribute("href", document.querySelector("#linkChrome").href);
+        document.querySelector("#linkToStorePrimary").setAttribute("href", document.querySelector("#linkChrome").href);
+        document.querySelector("#linkImgEdge").remove();
+        document.querySelector("#linkImgFirefox").remove();
+    }
+
+    console.log(`The current browser name is "${browser.getBrowserName()}"`);
+
+
 }
 indexPage()
+
+

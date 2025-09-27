@@ -88,6 +88,15 @@ body {
   background-color: #F2F6F8;
 }
 
+.dark-accent-row {
+  background-color: #00415d;
+  color: white;
+
+  a, p {
+    color: white;
+  }
+}
+
 #left-content {
   height: 50vh;
 }

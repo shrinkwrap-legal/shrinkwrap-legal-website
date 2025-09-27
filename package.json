@@ -42,5 +42,8 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "bowser": "^2.12.1"
   }
 }
