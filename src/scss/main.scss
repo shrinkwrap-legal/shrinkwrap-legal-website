@@ -85,3 +85,105 @@ body {
 #left-content {
   height: 50vh;
 }
+
+/* Keyframe animation for footer: up 10px in 0.5s, down in 0.8s (total 1.3s) */
+@keyframes footer-bob {
+  0% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  /* ca 2sek */
+  45% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes footer-visibility-1 {
+  0% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 1;
+  }
+  /* 0.8 / 2.6 */
+  22.1% {
+    opacity: 0;
+  }
+  72% {
+    opacity: 0;
+  }
+  /* 1.8 / 2.6 */
+  72.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes footer-visibility-2 {
+  0% {
+    opacity: 0;
+  }
+  22% {
+    opacity: 0;
+  }
+  /* 0.8 / 2.6 */
+  22.1% {
+    opacity: 1;
+  }
+  72% {
+    opacity: 1;
+  }
+  /* 1.8 / 2.6 */
+  72.1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#my-animation {
+  position: relative;
+
+  height: 1000px;
+  overflow: hidden;
+  background-color: white;
+
+
+  img {
+    width: 100%;
+  }
+
+  .animation-header {
+    margin-bottom: 10px;
+  }
+
+  .animation-footer-1 {
+    animation: footer-bob 5s ease-in-out infinite, footer-visibility-1 10s linear infinite;
+  }
+
+  .animation-footer-2 {
+    animation: footer-bob 5s ease-in-out infinite, footer-visibility-2 10s linear infinite;
+  }
+
+  .animation-footer-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .animation-footer-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
