@@ -66,7 +66,7 @@ body {
 }
 
 #left-content>div {
-  background: linear-gradient(transparent 0%, white 10%, white 90%, transparent 100%);
+  //background: linear-gradient(transparent 0%, white 10%, white 90%, transparent 100%);
 }
 
 #left-content {
@@ -74,16 +74,21 @@ body {
     vertical-align: sub;
   }
 
-  margin-left: 10px;
-  margin-right: 10px;
-  background: white;
+  #hero-logo {
+    background-color: white;
+  }
+  #hero-text {
+    background-color: white;
+  }
 }
 
 @media (max-width: 1200px) {
   #left-content {
     width: calc(100% - 20px) !important;
     position: absolute !important;
-    height: 80vh !important;
+
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -101,7 +106,7 @@ body {
 }
 
 #left-content {
-  height: 50vh;
+  height: 100vh;
 }
 
 /* Keyframe animation for footer: up 10px in 0.5s, down in 0.8s (total 1.3s) */

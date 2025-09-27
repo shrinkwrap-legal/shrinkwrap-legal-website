@@ -19,8 +19,8 @@
 <!-- Erste Sektion: Startseite (volle Bildschirmhöhe) -->
 <section class="d-xl-flex flex-column flex-lg-row vh-100 position-relative">
     <!-- Linke Seite: Großer Text und CTA -->
-    <div id="left-content" class="col-xl-6 d-flex flex-column justify-content-center  z-2">
-        <div class="mb-xl-auto">
+    <div id="left-content" class="col-xl-6 d-flex flex-column justify-content-center  z-1">
+        <div class="" id="hero-logo">
             <div class="container">
                 <div class="row">
                     <div class="offset-sm-2 col-12 mt-5">
@@ -32,8 +32,8 @@
                 </div>
             </div>
         </div>
-        <div class="" >
-            <div class="mx-auto container">
+        <div class="flex-grow-1 d-flex flex-column justify-content-center" id="hero-text">
+            <div class="container">
 
                 <div class="row">
                     <div class="offset-sm-2 col-sm-8">
@@ -55,6 +55,7 @@
                 </div>
             </div>
         </div>
+        <div class="container" style="height: 20vh"><!-- spacer for flexbox --></div>
     </div>
 
     <!-- Rechte Seite: Animierter Kleingedruckter Text -->
