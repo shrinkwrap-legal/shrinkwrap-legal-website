@@ -73,14 +73,17 @@ body {
   .btn-primary img {
     vertical-align: sub;
   }
+
+  margin-left: 10px;
+  margin-right: 10px;
+  background: white;
 }
 
 @media (max-width: 1200px) {
-  .w-xl-100 {
-    width: 100% !important;
-  }
-  .position-xl-absolute {
+  #left-content {
+    width: calc(100% - 20px) !important;
     position: absolute !important;
+    height: 80vh !important;
   }
 }
 
