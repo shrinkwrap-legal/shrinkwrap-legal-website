@@ -4,6 +4,7 @@ import '../scss/main.scss';
 // Load Bootstrap init
 import {initBootstrap} from "./bootstrap.js";
 import Bowser from "bowser";
+import "fslightbox";
 
 // Loading bootstrap with optional features
 initBootstrap({

@@ -44,6 +44,7 @@
     "webpack-dev-server": "^5.2.2"
   },
   "dependencies": {
-    "bowser": "^2.12.1"
+    "bowser": "^2.12.1",
+    "fslightbox": "^3.7.4"
   }
 }
