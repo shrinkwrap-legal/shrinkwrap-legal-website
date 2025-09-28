@@ -80,6 +80,20 @@ body {
   #hero-text {
     background-color: white;
   }
+  #hero-spacer {
+    height: 20vh;
+  }
+}
+
+@media (max-height: 660px) {
+ #left-content {
+   #hero-spacer {
+     height: 10vh;
+   }
+ }
+  #animation-container {
+    margin-top: -10vh !important;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -109,19 +123,38 @@ body {
   height: 100vh;
 }
 
-/* Keyframe animation for footer: up 10px in 0.5s, down in 0.8s (total 1.3s) */
+#animation-container {
+  margin-top: -20vh;
+}
+
+/* Keyframe animation for image */
+/**
+       | sek | % von 5 | % von 10
+------ | --- | ------- | --------
+       | 0   | 0       | 0
+beginn | 2   | 0,4     | 0,2
+mitte  | 2,1 | 0,42    | 0,21
+ende   | 2,2 | 0,44    | 0,22
+       | 2   | 0,4     | 0,2
+       | 5   |         | 0,5
+beginn | 7   |         | 0,7
+mitte  | 7,1 |         | 0,71
+ende   | 7,2 |         | 0,72
+       | 7   |         |
+       | 10  |         |
+ */
 @keyframes footer-bob {
   0% {
     transform: translateY(0);
   }
-  35% {
+  40% {
     transform: translateY(0);
   }
-  40% {
+  42% {
     transform: translateY(-15px);
   }
   /* ca 2sek */
-  45% {
+  44% {
     transform: translateY(0);
   }
   100% {
@@ -133,18 +166,18 @@ body {
   0% {
     opacity: 1;
   }
-  22% {
+  21% {
     opacity: 1;
   }
   /* 0.8 / 2.6 */
-  22.1% {
+  21.1% {
     opacity: 0;
   }
-  72% {
+  71% {
     opacity: 0;
   }
   /* 1.8 / 2.6 */
-  72.1% {
+  71.1% {
     opacity: 1;
   }
   100% {
@@ -156,18 +189,18 @@ body {
   0% {
     opacity: 0;
   }
-  22% {
+  21% {
     opacity: 0;
   }
   /* 0.8 / 2.6 */
-  22.1% {
+  21.1% {
     opacity: 1;
   }
-  72% {
+  71% {
     opacity: 1;
   }
   /* 1.8 / 2.6 */
-  72.1% {
+  71.1% {
     opacity: 0;
   }
   100% {
