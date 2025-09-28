@@ -115,11 +115,6 @@ export default {
       template: path.resolve(process.cwd(), "index.html"),
       chunks: ['main']
     }),
-      new HtmlWebpackPlugin({
-          template: path.resolve(process.cwd(), "index2.html"),
-          filename:"index2.html",
-          chunks: ['main']
-      }),
     new HtmlWebpackPlugin({
       template: path.resolve(process.cwd(), "terms-imprint-privacy.html"),
       filename: "terms-imprint-privacy.html",
