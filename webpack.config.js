@@ -12,8 +12,9 @@ export default {
 
   // Define the destination directory and filenames of compiled resources
   output: {
-    filename: "js/[name].js",
+    filename: "js/[name].[contenthash].js",
     path: path.resolve(process.cwd(), "./dist"),
+    clean: true,
   },
   devtool: "source-map",
 
@@ -76,8 +77,8 @@ export default {
 
     // Extracts CSS into separate files
     new MiniCssExtractPlugin({
-      filename: "css/[name].css",
-      chunkFilename: "[id].css"
+      filename: "css/[name].[contenthash].css",
+      chunkFilename: "css/[id].[contenthash].css"
     }),
 
     // Copy images to the public folder
@@ -103,15 +104,18 @@ export default {
 
     // Inject styles and scripts into the HTML
     new HtmlWebpackPlugin({
-      template: path.resolve(process.cwd(), "index.html")
+      template: path.resolve(process.cwd(), "index.html"),
+      chunks: ['main']
     }),
       new HtmlWebpackPlugin({
           template: path.resolve(process.cwd(), "index2.html"),
-          filename:"index2.html"
+          filename:"index2.html",
+          chunks: ['main']
       }),
     new HtmlWebpackPlugin({
       template: path.resolve(process.cwd(), "terms-imprint-privacy.html"),
-      filename: "terms-imprint-privacy.html"
+      filename: "terms-imprint-privacy.html",
+      chunks: ['main']
     })
   ],
 
