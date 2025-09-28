@@ -57,7 +57,15 @@ export default {
               }
             }
           },
-          "sass-loader"
+          {
+            loader: "sass-loader",
+            options: {
+                sassOptions: {
+                    silenceDeprecations: ['color-functions', 'global-builtin', 'import'],
+                },
+              sourceMap: true
+            }
+          }
         ],
       },
       // File loader for images
