@@ -28,13 +28,13 @@ function indexPage() {
 
 // Zusätzliche Logik, um die Animation beim Hover zu stoppen
     const smallPrintContainer = document.getElementById('small-print-wrapper');
-    smallPrintContainer.addEventListener('mouseenter', () => {
+    /*smallPrintContainer.addEventListener('mouseenter', () => {
         smallPrintContainer.style.animationPlayState = 'paused';
     });
 
     smallPrintContainer.addEventListener('mouseleave', () => {
         smallPrintContainer.style.animationPlayState = 'running';
-    });
+    });*/
 
 // Stoppt und startet die Animation, wenn die Seite sichtbar/unsichtbar wird
     document.addEventListener("visibilitychange", () => {
