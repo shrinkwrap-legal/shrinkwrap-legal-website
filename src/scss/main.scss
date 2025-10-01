@@ -55,9 +55,6 @@ body {
   animation: scroll 60s linear infinite;
   max-height: 3600px;
 }
-#small-print-wrapper:hover {
-  animation-play-state: paused;
-}
 
 /* Optimierte Animation für flüssiges Scrollen */
 @keyframes scroll {
