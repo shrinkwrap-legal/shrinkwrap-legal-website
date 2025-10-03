@@ -79,14 +79,24 @@ body {
   }
 }
 
-@media (max-height: 660px) {
+@media (max-height: 690px) {
  #left-content {
    #hero-spacer {
-     height: 10vh;
+     height: 11vh;
+   }
+
+   #hero-logo .mt-5 {
+     margin-top: 1rem !important;
    }
  }
   #animation-container {
     margin-top: -10vh !important;
+  }
+}
+
+@media (max-height: 660px) and (min-width: 1200px) {
+  #animation-container {
+    margin-top: 0 !important;
   }
 }
 
